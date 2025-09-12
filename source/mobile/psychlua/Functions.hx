@@ -1,5 +1,6 @@
 package mobile.psychlua;
 
+#if mobile
 import psychlua.CustomSubstate;
 #if LUA_ALLOWED
 import lime.ui.Haptic;
@@ -8,10 +9,6 @@ import psychlua.LuaUtils;
 import mobile.backend.TouchUtil;
 #if android import mobile.backend.PsychJNI; #end
 
-/**
- * ...
- * @author: Karim Akra and Homura Akemi (HomuHomu833)
- */
 class MobileFunctions {
 	public static function implement(funk:FunkinLua) {
 		var lua:State = funk.lua;
@@ -301,5 +298,6 @@ class AndroidFunctions {
 		});
 	}
 }
+#end
 #end
 #end
